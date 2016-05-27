@@ -97,12 +97,20 @@
     background-color:#f6f6f6;
     padding:10px;
     border-radius:5px;
+    white-space:pre-wrap;
   }
   em{
     font-style:italic;
   }
   strong{
     font-weight:bold;
+  }
+  input{
+    background-color:#999;
+    color:#fff;
+    border-radius:5px;
+    border-bottom:1px solid #333;
+    padding:5px 10px;
   }
   </style>
 </head>
@@ -184,7 +192,8 @@
     <li>The first item in any list</li>
   </ul>
   <h3 id="you-do-getters-and-setters">You Do: Getters and setters</h3>
-  <p>Several functions, like <code>.css()</code>, <code>.html()</code>, and <code>.text()</code> do different things depending on whether you put 1, 2, 3, or more things inside them. What's the difference?</p>
+  <p>Several functions, like <code>.css()</code>, <code>.html()</code>, and <code>.text()</code> do different things depending on whether you put 1, 2, 3, or more things inside them.</p>
+  <p>Using the Chrome console, can you figure out what the difference is for each of these?</p>
   <pre class="js"><code>$("something").css()
 $("something").css("color")
 $("something").css("color", "blue")</code></pre>
@@ -195,10 +204,38 @@ $("something").html("&lt;h1&gt;Hello&lt;/h1&gt;", "&lt;h1&gt;World&lt;/h1&gt;")<
 $("something").text("&lt;h1&gt;Hello&lt;/h1&gt;")
 $("something").text("&lt;h1&gt;Hello&lt;/h1&gt;", "&lt;h1&gt;World&lt;/h1&gt;")</code></pre>
   <h2 id="whats-an-event">What's an event?</h2>
+  <p>Any interaction with the page is an <strong>event</strong>.</p>
+  <h3 id="you-do-practice-with-events">You Do: Practice with Events</h3>
+  <p><input id="hello" onclick="$('#hello').css('color', 'red')" value="Hello, world!"></p>
+  <p>This is the code for the text box above:</p>
+  <pre class="html"><code>&lt;input id="hello" onclick="$('#hello').css('color', 'red')" value="Hello, world!" /&gt;</code></pre>
+  <ul>
+    <li>What is <code>onclick</code> in HTML terminology? (Hint: It's the same thing as <code>id</code>, or <code>href</code>, or <code>src</code>...)</li>
+    <li>What goes inside <code>onclick</code>?</li>
+    <li>What does it do?</li>
+  </ul>
+  <p>How would you change the code so it responds...?</p>
+  <ul>
+    <li>When the <em>mouse</em> goes <em>over</em> an element</li>
+    <li>When a <em>key</em> goes <em>down</em> after you've clicked an element</li>
+    <li>When the mouse goes away from an element</li>
+  </ul>
   <h2 id="putting-them-together">Putting them together</h2>
-  <pre class="js"></pre>
-  <h3 id="lights-out">Lights Out</h3>
-  <h3 id="tic-tac-toe">Tic Tac Toe</h3>
+  <p id="poke" onclick="$('#poke').css('color', 'red'); alert($('#poke').text())">You can do any number of jQuery functions in one event. Separate them with a semicolon (<code>;</code>).</p>
+  <pre class="html"><code>&lt;p id="poke" onclick="$('#poke').css('color', 'red'); alert($('#poke').text())"&gt;You can do any number of jQuery functions in one event. Separate them with a `;` semicolon.&lt;/p&gt;</code></pre>
+  <ul>
+    <li>
+      <a href="https://github.com/ga-wdi-exercises/lights_out">Lights Out</a>
+    </li>
+    <li>
+      <a href="https://github.com/ga-wdi-exercises/tic_tac_toe">Tic Tac Toe</a>
+    </li>
+  </ul>
   <h2 id="references">References</h2>
+  <ul>
+    <li>
+      <a href="http://jquery.com/">Official jQuery Documentation</a>
+    </li>
+  </ul>
 </body>
 </html>

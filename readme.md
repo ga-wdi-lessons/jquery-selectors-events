@@ -91,7 +91,9 @@ Using jQuery and `.css("color", "blue")`, select the following elements and turn
 
 ### You Do: Getters and setters
 
-Several functions, like `.css()`, `.html()`, and `.text()` do different things depending on whether you put 1, 2, 3, or more things inside them. What's the difference?
+Several functions, like `.css()`, `.html()`, and `.text()` do different things depending on whether you put 1, 2, 3, or more things inside them.
+
+Using the Chrome console, can you figure out what the difference is for each of these?
 
 ```js
 $("something").css()
@@ -113,17 +115,39 @@ $("something").text("<h1>Hello</h1>", "<h1>World</h1>")
 
 ## What's an event?
 
+Any interaction with the page is an **event**.
 
+### You Do: Practice with Events
+
+<input id="hello" onclick="$('#hello').css('color', 'red')" value="Hello, world!" />
+
+This is the code for the text box above:
+
+```html
+<input id="hello" onclick="$('#hello').css('color', 'red')" value="Hello, world!" />
+```
+
+- What is `onclick` in HTML terminology? (Hint: It's the same thing as `id`, or `href`, or `src`...)
+- What goes inside `onclick`?
+- What does it do?
+
+How would you change the code so it responds...?
+
+- When the *mouse* goes *over* an element
+- When a *key* goes *down* after you've clicked an element
+- When the mouse goes away from an element
 
 ## Putting them together
 
-```js
+<p id="poke" onclick="$('#poke').css('color', 'red'); alert($('#poke').text())">You can do any number of jQuery functions in one event. Separate them with a semicolon (`;`).</p>
 
+```html
+<p id="poke" onclick="$('#poke').css('color', 'red'); alert($('#poke').text())">You can do any number of jQuery functions in one event. Separate them with a `;` semicolon.</p>
 ```
 
-### Lights Out
-
-### Tic Tac Toe
+- [Lights Out](https://github.com/ga-wdi-exercises/lights_out)
+- [Tic Tac Toe](https://github.com/ga-wdi-exercises/tic_tac_toe)
 
 ## References
 
+- [Official jQuery Documentation](http://jquery.com/)

@@ -50,139 +50,125 @@
   <![endif]-->
 </head>
 <body>
-  <section id="jquery-selectors-and-events" class="level1">
-    <h1>jQuery Selectors and Events</h1>
-    <section id="learning-objectives" class="level2">
-      <h2>Learning Objectives</h2>
-      <ul>
-        <li>Identify whether a desired functionality can be accomplished with CSS or with Javascript.</li>
-        <li>Use jQuery to manipulate elements on a webpage.</li>
-        <li>Use events to add interactivity to a webpage.</li>
-      </ul>
-    </section>
-    <section id="framing" class="level2">
-      <h2>Framing</h2>
-      <p>The intent of this class is to understand what Javascript is capable of, and what it can do that CSS cannot.</p>
-    </section>
-    <section id="what-is-jquery" class="level2">
-      <h2>What is jQuery?</h2>
-      <p><em>jQuery is Javascript.</em></p>
-      <p>It's a bunch of Javascript someone wrote for you so you don't have to.</p>
-      <p>It's as if someone wrote a whole bunch of CSS classes for you to save you time working on your webpage.</p>
-      <p>jQuery's slogan is "write less; do more".</p>
-      <section id="whats-a-library" class="level3">
-        <h3>What's a library?</h3>
-        <p>A bunch of code someone wrote for you that you can use in your code is considered a <strong>library</strong>.</p>
-        <p>Some notable other libraries are Bootstrap CSS, Underscore JS, and D3 JS.</p>
-        <p>Just as jQuery is pure Javascript, Bootstrap is pure CSS. If you look at the source code for Bootstrap, it is 100% CSS just like you've written yourself. There's no "magic".</p>
-      </section>
-      <section id="minification" class="level3">
-        <h3>Minification</h3>
-        <p>This is jQuery:</p>
-        <p>https://code.jquery.com/jquery-1.12.4.js</p>
-        <p>This is also jQuery:</p>
-        <p>https://code.jquery.com/jquery-1.12.4.min.js</p>
-        <p>They are the exact same code. One has been "minified".</p>
-        <ul>
-          <li>Why would you minify code?</li>
-        </ul>
-      </section>
-    </section>
-    <section id="what-can-you-do-with-jquery" class="level2">
-      <h2>What can you do with jQuery?</h2>
-      <section id="documentation-dive" class="level3">
-        <h3>Documentation Dive</h3>
-        <section id="questions" class="level4">
-          <h4>Questions</h4>
-          <ul>
-            <li>What are 3 interesting-looking jQuery functions you found?</li>
-            <li>What do you put inside <code>$(" ... ")</code>?</li>
-          </ul>
-        </section>
-        <section id="look-at" class="level4">
-          <h4>Look at:</h4>
-          <ul>
-            <li>
-              <a href="http://api.jquery.com/category/attributes/">Attributes</a>
-            </li>
-            <li>
-              <a href="http://api.jquery.com/category/css/">CSS</a>
-            </li>
-            <li>
-              <a href="http://api.jquery.com/category/dimensions/">Dimensions</a>
-            </li>
-            <li>
-              <a href="http://api.jquery.com/category/effects/">Effects</a>
-            </li>
-            <li>
-              <a href="http://api.jquery.com/category/events/">Events</a>
-            </li>
-            <li>
-              <a href="http://api.jquery.com/category/manipulation/">Manipulation</a>
-            </li>
-            <li>
-              <a href="http://api.jquery.com/category/offset/">Offset</a>
-            </li>
-          </ul>
-        </section>
-      </section>
-      <section id="selecting-elements" class="level3">
-        <h3>Selecting elements</h3>
-        <p>We're going to use jQuery to manipulate elements.</p>
-        <p>jQuery selectors are just like CSS selectors. The only difference is you "wrap them in cash":</p>
-        <section id="css" class="level4">
-          <h4>CSS</h4>
-          <div class="sourceCode">
-            <pre class="sourceCode css"><code class="sourceCode css">ul &gt; li<span class="fl">.message</span><span class="dv">:not</span>(<span class="dv">:first-child</span>)<span class="kw">{</span>
+  <!-- All this HTML was generated using Pandoc -->
+  <script src="jquery.js">
+  </script> 
+  <script>
+  $(document).ready(function(){
+  $("h1,h2,h3,h4,h5,h6").each(function(index, element){
+    var text      = $(element).text();
+    var id        = $(element).prop("id");
+    var link      = $("<a>").prop("href", "#" + id).addClass("nav").text(text);
+    $(element).html(link);
+  });
+  });
+  </script>
+  <style>
+  .nav{
+  color:#000;
+  text-decoration:none;
+  }
+  .nav:hover{
+  color:#69c;
+  }
+  pre{
+  background-color:#f6f6f6;
+  padding:10px;
+  }
+  </style>
+  <h1 id="jquery-selectors-and-events">jQuery Selectors and Events</h1>
+  <h2 id="learning-objectives">Learning Objectives</h2>
+  <ul>
+    <li>Identify whether a desired functionality can be accomplished with CSS or with Javascript.</li>
+    <li>Use jQuery to manipulate elements on a webpage.</li>
+    <li>Use events to add interactivity to a webpage.</li>
+  </ul>
+  <h2 id="framing">Framing</h2>
+  <p>The intent of this class is to understand what Javascript is capable of, and what it can do that CSS cannot.</p>
+  <h2 id="what-is-jquery">What is jQuery?</h2>
+  <p><em>jQuery is Javascript.</em></p>
+  <p>It's a bunch of Javascript someone wrote for you so you don't have to.</p>
+  <p>It's as if someone wrote a whole bunch of CSS classes for you to save you time working on your webpage.</p>
+  <p>jQuery's slogan is "write less; do more".</p>
+  <h3 id="whats-a-library">What's a library?</h3>
+  <p>A bunch of code someone wrote for you that you can use in your code is considered a <strong>library</strong>.</p>
+  <p>Some notable other libraries are Bootstrap CSS, Underscore JS, and D3 JS.</p>
+  <p>Just as jQuery is pure Javascript, Bootstrap is pure CSS. If you look at the source code for Bootstrap, it is 100% CSS just like you've written yourself. There's no "magic".</p>
+  <h3 id="minification">Minification</h3>
+  <p><a href="jquery.js">This is jQuery.</a></p>
+  <p><a href="jquery.min.js">This is also jQuery.</a></p>
+  <p>They are the exact same code. One has been "minified".</p>
+  <ul>
+    <li>Why would you minify code?</li>
+  </ul>
+  <h2 id="what-can-you-do-with-jquery">What can you do with jQuery?</h2>
+  <h3 id="documentation-dive">Documentation Dive</h3>
+  <h4 id="questions">Questions</h4>
+  <ul>
+    <li>What are 3 interesting-looking jQuery functions you found?</li>
+    <li>What do you put inside <code>$(" ... ")</code>?</li>
+  </ul>
+  <h4 id="look-at">Look at:</h4>
+  <ul>
+    <li>
+      <a href="http://api.jquery.com/category/attributes/">Attributes</a>
+    </li>
+    <li>
+      <a href="http://api.jquery.com/category/css/">CSS</a>
+    </li>
+    <li>
+      <a href="http://api.jquery.com/category/dimensions/">Dimensions</a>
+    </li>
+    <li>
+      <a href="http://api.jquery.com/category/effects/">Effects</a>
+    </li>
+    <li>
+      <a href="http://api.jquery.com/category/events/">Events</a>
+    </li>
+    <li>
+      <a href="http://api.jquery.com/category/manipulation/">Manipulation</a>
+    </li>
+    <li>
+      <a href="http://api.jquery.com/category/offset/">Offset</a>
+    </li>
+  </ul>
+  <h3 id="selecting-elements">Selecting elements</h3>
+  <p>We're going to use jQuery to manipulate elements.</p>
+  <p>jQuery selectors are just like CSS selectors. The only difference is you "wrap them in cash":</p>
+  <h4 id="css">CSS</h4>
+  <div class="sourceCode">
+    <pre class="sourceCode css"><code class="sourceCode css">ul &gt; li<span class="fl">.message</span><span class="dv">:not</span>(<span class="dv">:first-child</span>)<span class="kw">{</span>
   <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre>
-          </div>
-        </section>
-        <section id="jquery" class="level4">
-          <h4>jQuery</h4>
-          <div class="sourceCode">
-            <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"ul &gt; li.message:not(:first-child)"</span>).<span class="at">css</span>(<span class="st">"color"</span><span class="op">,</span> <span class="st">"red"</span>)</code></pre>
-          </div>
-        </section>
-      </section>
-      <section id="you-do-getters-and-setters" class="level3">
-        <h3>You Do: Getters and setters</h3>
-        <p>Several functions, like <code>.css()</code>, <code>.html()</code>, and <code>.text()</code> do different things depending on whether you put 1, 2, 3, or more things inside them. What's the difference?</p>
-        <div class="sourceCode">
-          <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>()
+  </div>
+  <h4 id="jquery">jQuery</h4>
+  <div class="sourceCode">
+    <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"ul &gt; li.message:not(:first-child)"</span>).<span class="at">css</span>(<span class="st">"color"</span><span class="op">,</span> <span class="st">"red"</span>)</code></pre>
+  </div>
+  <h3 id="you-do-getters-and-setters">You Do: Getters and setters</h3>
+  <p>Several functions, like <code>.css()</code>, <code>.html()</code>, and <code>.text()</code> do different things depending on whether you put 1, 2, 3, or more things inside them. What's the difference?</p>
+  <div class="sourceCode">
+    <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>()
 <span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>(<span class="st">"color"</span>)
 <span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>(<span class="st">"color"</span><span class="op">,</span> <span class="st">"red"</span>)</code></pre>
-        </div>
-        <div class="sourceCode">
-          <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>()
+  </div>
+  <div class="sourceCode">
+    <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>()
 <span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span>)
 <span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span><span class="op">,</span> <span class="st">"&lt;h1&gt;World&lt;/h1&gt;"</span>)</code></pre>
-        </div>
-        <div class="sourceCode">
-          <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>()
+  </div>
+  <div class="sourceCode">
+    <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>()
 <span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span>)
 <span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span><span class="op">,</span> <span class="st">"&lt;h1&gt;World&lt;/h1&gt;"</span>)</code></pre>
-        </div>
-      </section>
-    </section>
-    <section id="whats-an-event" class="level2">
-      <h2>What's an event?</h2>
-    </section>
-    <section id="putting-them-together" class="level2">
-      <h2>Putting them together</h2>
-      <div class="sourceCode">
-        <pre class="sourceCode js"></pre>
-      </div>
-      <section id="lights-out" class="level3">
-        <h3>Lights Out</h3>
-      </section>
-      <section id="tic-tac-toe" class="level3">
-        <h3>Tic Tac Toe</h3>
-      </section>
-    </section>
-    <section id="references" class="level2">
-      <h2>References</h2>
-    </section>
-  </section>
+  </div>
+  <h2 id="whats-an-event">What's an event?</h2>
+  <h2 id="putting-them-together">Putting them together</h2>
+  <div class="sourceCode">
+    <pre class="sourceCode js"></pre>
+  </div>
+  <h3 id="lights-out">Lights Out</h3>
+  <h3 id="tic-tac-toe">Tic Tac Toe</h3>
+  <h2 id="references">References</h2>
 </body>
 </html>

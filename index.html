@@ -173,12 +173,21 @@
   color: red;
 }</code></pre>
   <h4 id="jquery">jQuery</h4>
-  <pre class="js"><code>$("ul &gt; li.message:not(:first-child)").css("color", "red")</code></pre>
+  <pre class="js"><code>$("ul &gt; li.message:not(:first-child)").css("color", "blue")</code></pre>
+  <h3 id="you-do-practice-with-selectors">You Do: Practice with Selectors</h3>
+  <p>Open the Chrome console (Command + Option + J).</p>
+  <p>Using jQuery and <code>.css("color", "blue")</code>, select the following elements and turn them blue. Refresh the page to go back to their original colors.</p>
+  <ul>
+    <li>All paragraphs</li>
+    <li>All links inside an <code>&lt;h2&gt;</code></li>
+    <li>Anything with the class of <code>css</code> or the class of <code>js</code></li>
+    <li>The first item in any list</li>
+  </ul>
   <h3 id="you-do-getters-and-setters">You Do: Getters and setters</h3>
   <p>Several functions, like <code>.css()</code>, <code>.html()</code>, and <code>.text()</code> do different things depending on whether you put 1, 2, 3, or more things inside them. What's the difference?</p>
   <pre class="js"><code>$("something").css()
 $("something").css("color")
-$("something").css("color", "red")</code></pre>
+$("something").css("color", "blue")</code></pre>
   <pre class="js"><code>$("something").html()
 $("something").html("&lt;h1&gt;Hello&lt;/h1&gt;")
 $("something").html("&lt;h1&gt;Hello&lt;/h1&gt;", "&lt;h1&gt;World&lt;/h1&gt;")</code></pre>

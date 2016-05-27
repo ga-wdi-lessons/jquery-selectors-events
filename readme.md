@@ -75,8 +75,19 @@ ul > li.message:not(:first-child){
 #### jQuery
 
 ```js
-$("ul > li.message:not(:first-child)").css("color", "red")
+$("ul > li.message:not(:first-child)").css("color", "blue")
 ```
+
+### You Do: Practice with Selectors
+
+Open the Chrome console (Command + Option + J).
+
+Using jQuery and `.css("color", "blue")`, select the following elements and turn them blue. Refresh the page to go back to their original colors.
+
+- All paragraphs
+- All links inside an `<h2>`
+- Anything with the class of `css` or the class of `js`
+- The first item in any list
 
 ### You Do: Getters and setters
 
@@ -85,7 +96,7 @@ Several functions, like `.css()`, `.html()`, and `.text()` do different things d
 ```js
 $("something").css()
 $("something").css("color")
-$("something").css("color", "red")
+$("something").css("color", "blue")
 ```
 
 ```js

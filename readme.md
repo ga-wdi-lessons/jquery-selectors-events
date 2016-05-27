@@ -38,6 +38,7 @@ Just as jQuery is pure Javascript, Bootstrap is pure CSS. If you look at the sou
 They are the exact same code. One has been "minified".
 
 - Why would you minify code?
+- True or false: If you get an error in your code, you should go look for the cause in the jQuery source code and fix it there.
 
 ## What can you do with jQuery?
 
@@ -145,8 +146,19 @@ How would you change the code so it responds...?
 <p id="poke" onclick="$('#poke').css('color', 'red'); alert($('#poke').text())">You can do any number of jQuery functions in one event. Separate them with a `;` semicolon.</p>
 ```
 
-- [Lights Out](https://github.com/ga-wdi-exercises/lights_out)
-- [Tic Tac Toe](https://github.com/ga-wdi-exercises/tic_tac_toe)
+### Lights Out
+
+[Link](https://github.com/ga-wdi-exercises/lights_out)
+
+Read the Wiki for instructions.
+
+### Tic Tac Toe
+
+[Link](https://github.com/ga-wdi-exercises/tic_tac_toe)
+
+- Ignore the "How to get started", because the game board has been provided for you.
+- Follow the "minimum requirements" like a series of steps.
+- After cloning this down, checkout the `jquery-soup-starter` branch to begin.
 
 ## References
 

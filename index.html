@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for HTML5 for Mac OS X version 5.2.0">
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>readme.md –</title>
+  <style type="text/css">
+  code{white-space: pre;}
+  </style>
+  <style type="text/css">
+  div.sourceCode { overflow-x: auto; }
+  table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+  table.sourceCode { width: 100%; line-height: 100%; }
+  td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+  td.sourceCode { padding-left: 5px; }
+  code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+  code > span.dt { color: #902000; } /* DataType */
+  code > span.dv { color: #40a070; } /* DecVal */
+  code > span.bn { color: #40a070; } /* BaseN */
+  code > span.fl { color: #40a070; } /* Float */
+  code > span.ch { color: #4070a0; } /* Char */
+  code > span.st { color: #4070a0; } /* String */
+  code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+  code > span.ot { color: #007020; } /* Other */
+  code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+  code > span.fu { color: #06287e; } /* Function */
+  code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+  code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  code > span.cn { color: #880000; } /* Constant */
+  code > span.sc { color: #4070a0; } /* SpecialChar */
+  code > span.vs { color: #4070a0; } /* VerbatimString */
+  code > span.ss { color: #bb6688; } /* SpecialString */
+  code > span.im { } /* Import */
+  code > span.va { color: #19177c; } /* Variable */
+  code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+  code > span.op { color: #666666; } /* Operator */
+  code > span.bu { } /* BuiltIn */
+  code > span.ex { } /* Extension */
+  code > span.pp { color: #bc7a00; } /* Preprocessor */
+  code > span.at { color: #7d9029; } /* Attribute */
+  code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+  code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+  code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+  code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style><!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <section id="jquery-selectors-and-events" class="level1">
+    <h1>jQuery Selectors and Events</h1>
+    <section id="learning-objectives" class="level2">
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Identify whether a desired functionality can be accomplished with CSS or with Javascript.</li>
+        <li>Use jQuery to manipulate elements on a webpage.</li>
+        <li>Use events to add interactivity to a webpage.</li>
+      </ul>
+    </section>
+    <section id="framing" class="level2">
+      <h2>Framing</h2>
+      <p>The intent of this class is to understand what Javascript is capable of, and what it can do that CSS cannot.</p>
+    </section>
+    <section id="what-is-jquery" class="level2">
+      <h2>What is jQuery?</h2>
+      <p><em>jQuery is Javascript.</em></p>
+      <p>It's a bunch of Javascript someone wrote for you so you don't have to.</p>
+      <p>It's as if someone wrote a whole bunch of CSS classes for you to save you time working on your webpage.</p>
+      <p>jQuery's slogan is "write less; do more".</p>
+      <section id="whats-a-library" class="level3">
+        <h3>What's a library?</h3>
+        <p>A bunch of code someone wrote for you that you can use in your code is considered a <strong>library</strong>.</p>
+        <p>Some notable other libraries are Bootstrap CSS, Underscore JS, and D3 JS.</p>
+        <p>Just as jQuery is pure Javascript, Bootstrap is pure CSS. If you look at the source code for Bootstrap, it is 100% CSS just like you've written yourself. There's no "magic".</p>
+      </section>
+      <section id="minification" class="level3">
+        <h3>Minification</h3>
+        <p>This is jQuery:</p>
+        <p>https://code.jquery.com/jquery-1.12.4.js</p>
+        <p>This is also jQuery:</p>
+        <p>https://code.jquery.com/jquery-1.12.4.min.js</p>
+        <p>They are the exact same code. One has been "minified".</p>
+        <ul>
+          <li>Why would you minify code?</li>
+        </ul>
+      </section>
+    </section>
+    <section id="what-can-you-do-with-jquery" class="level2">
+      <h2>What can you do with jQuery?</h2>
+      <section id="documentation-dive" class="level3">
+        <h3>Documentation Dive</h3>
+        <section id="questions" class="level4">
+          <h4>Questions</h4>
+          <ul>
+            <li>What are 3 interesting-looking jQuery functions you found?</li>
+            <li>What do you put inside <code>$(" ... ")</code>?</li>
+          </ul>
+        </section>
+        <section id="look-at" class="level4">
+          <h4>Look at:</h4>
+          <ul>
+            <li>
+              <a href="http://api.jquery.com/category/attributes/">Attributes</a>
+            </li>
+            <li>
+              <a href="http://api.jquery.com/category/css/">CSS</a>
+            </li>
+            <li>
+              <a href="http://api.jquery.com/category/dimensions/">Dimensions</a>
+            </li>
+            <li>
+              <a href="http://api.jquery.com/category/effects/">Effects</a>
+            </li>
+            <li>
+              <a href="http://api.jquery.com/category/events/">Events</a>
+            </li>
+            <li>
+              <a href="http://api.jquery.com/category/manipulation/">Manipulation</a>
+            </li>
+            <li>
+              <a href="http://api.jquery.com/category/offset/">Offset</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="selecting-elements" class="level3">
+        <h3>Selecting elements</h3>
+        <p>We're going to use jQuery to manipulate elements.</p>
+        <p>jQuery selectors are just like CSS selectors. The only difference is you "wrap them in cash":</p>
+        <section id="css" class="level4">
+          <h4>CSS</h4>
+          <div class="sourceCode">
+            <pre class="sourceCode css"><code class="sourceCode css">ul &gt; li<span class="fl">.message</span><span class="dv">:not</span>(<span class="dv">:first-child</span>)<span class="kw">{</span>
+  <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre>
+          </div>
+        </section>
+        <section id="jquery" class="level4">
+          <h4>jQuery</h4>
+          <div class="sourceCode">
+            <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"ul &gt; li.message:not(:first-child)"</span>).<span class="at">css</span>(<span class="st">"color"</span><span class="op">,</span> <span class="st">"red"</span>)</code></pre>
+          </div>
+        </section>
+      </section>
+      <section id="you-do-getters-and-setters" class="level3">
+        <h3>You Do: Getters and setters</h3>
+        <p>Several functions, like <code>.css()</code>, <code>.html()</code>, and <code>.text()</code> do different things depending on whether you put 1, 2, 3, or more things inside them. What's the difference?</p>
+        <div class="sourceCode">
+          <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>()
+<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>(<span class="st">"color"</span>)
+<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>(<span class="st">"color"</span><span class="op">,</span> <span class="st">"red"</span>)</code></pre>
+        </div>
+        <div class="sourceCode">
+          <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>()
+<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span>)
+<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span><span class="op">,</span> <span class="st">"&lt;h1&gt;World&lt;/h1&gt;"</span>)</code></pre>
+        </div>
+        <div class="sourceCode">
+          <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>()
+<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span>)
+<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span><span class="op">,</span> <span class="st">"&lt;h1&gt;World&lt;/h1&gt;"</span>)</code></pre>
+        </div>
+      </section>
+    </section>
+    <section id="whats-an-event" class="level2">
+      <h2>What's an event?</h2>
+    </section>
+    <section id="putting-them-together" class="level2">
+      <h2>Putting them together</h2>
+      <div class="sourceCode">
+        <pre class="sourceCode js"></pre>
+      </div>
+      <section id="lights-out" class="level3">
+        <h3>Lights Out</h3>
+      </section>
+      <section id="tic-tac-toe" class="level3">
+        <h3>Tic Tac Toe</h3>
+      </section>
+    </section>
+    <section id="references" class="level2">
+      <h2>References</h2>
+    </section>
+  </section>
+</body>
+</html>

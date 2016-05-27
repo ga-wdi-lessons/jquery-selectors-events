@@ -1,28 +1,4 @@
-<!-- All this HTML was generated using Pandoc -->
 <script src="jquery.js"></script>
-<script>
-$(document).ready(function(){
-  $("h1,h2,h3,h4,h5,h6").each(function(index, element){
-    var text      = $(element).text();
-    var id        = $(element).prop("id");
-    var link      = $("<a>").prop("href", "#" + id).addClass("nav").text(text);
-    $(element).html(link);
-  });
-});
-</script>
-<style>
-.nav{
-  color:#000;
-  text-decoration:none;
-}
-.nav:hover{
-  color:#69c;
-}
-pre{
-  background-color:#f6f6f6;
-  padding:10px;
-}
-</style>
 
 # jQuery Selectors and Events
 

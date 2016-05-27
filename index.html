@@ -2,80 +2,113 @@
 <html>
 <head>
   <meta name="generator" content="HTML Tidy for HTML5 for Mac OS X version 5.2.0">
-  <meta charset="utf-8">
+  <meta charset="utf-8"><!-- All this HTML was generated using Pandoc and Tidy-HTML5 -->
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>readme.md –</title>
-  <style type="text/css">
-  code{white-space: pre;}
-  </style>
-  <style type="text/css">
-  div.sourceCode { overflow-x: auto; }
-  table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-  table.sourceCode { width: 100%; line-height: 100%; }
-  td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-  td.sourceCode { padding-left: 5px; }
-  code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-  code > span.dt { color: #902000; } /* DataType */
-  code > span.dv { color: #40a070; } /* DecVal */
-  code > span.bn { color: #40a070; } /* BaseN */
-  code > span.fl { color: #40a070; } /* Float */
-  code > span.ch { color: #4070a0; } /* Char */
-  code > span.st { color: #4070a0; } /* String */
-  code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-  code > span.ot { color: #007020; } /* Other */
-  code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-  code > span.fu { color: #06287e; } /* Function */
-  code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-  code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  code > span.cn { color: #880000; } /* Constant */
-  code > span.sc { color: #4070a0; } /* SpecialChar */
-  code > span.vs { color: #4070a0; } /* VerbatimString */
-  code > span.ss { color: #bb6688; } /* SpecialString */
-  code > span.im { } /* Import */
-  code > span.va { color: #19177c; } /* Variable */
-  code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-  code > span.op { color: #666666; } /* Operator */
-  code > span.bu { } /* BuiltIn */
-  code > span.ex { } /* Extension */
-  code > span.pp { color: #bc7a00; } /* Preprocessor */
-  code > span.at { color: #7d9029; } /* Attribute */
-  code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-  code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-  code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-  code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-  </style><!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-  <!-- All this HTML was generated using Pandoc -->
-  <script src="jquery.js">
-  </script> 
+  <title>jquery-selectors-events</title>
   <script>
-  $(document).ready(function(){
-  $("h1,h2,h3,h4,h5,h6").each(function(index, element){
-    var text      = $(element).text();
-    var id        = $(element).prop("id");
-    var link      = $("<a>").prop("href", "#" + id).addClass("nav").text(text);
-    $(element).html(link);
-  });
+  document.addEventListener("DOMContentLoaded", function(){
+    var hTags = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+    [].forEach.call(hTags, function(hTag){
+      var link  = document.createElement("A");
+      link.href = "#" + hTag.id;
+      link.classList.add("nav");
+      link.textContent  = (hTag.textContent);
+      hTag.innerHTML    = link.outerHTML;
+    });
   });
   </script>
   <style>
-  .nav{
-  color:#000;
-  text-decoration:none;
+  *{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:inherit;
+    font-weight:inherit;
+    font-family:inherit;
+    font-style:inherit;
+    text-decoration:inherit;
+    line-height:inherit;
+    color:inherit;
   }
-  .nav:hover{
-  color:#69c;
+  html{
+    font-size:24px;
+    line-height:32px;
+    color:#444;
+  }
+  body{
+    max-width:800px;
+    margin:0 auto;
+  }
+  h1, h2, h3, h4, h5, h6{
+    font-family:"Helvetica Neue", Helvetica, sans-serif;
+    font-weight:bold;
+    margin:2em 0 1em 0;
+  }
+  h1 a{
+    font-size:36px;
+    line-height:60px;
+    border-top:2px solid #ccc;
+    text-align:center;
+  }
+  h2 a{
+    font-size:28px;
+    line-height:50px;
+    background-color:#eee;
+    border-top:1px solid #ccc;
+    text-align:center;
+  }
+  h3 a{
+    font-size:24px;
+    line-height:30px;
+    border-bottom:1px solid #ccc;
+  }
+  h4 a{
+    font-size:18px;
+    line-height:30px;
+  }
+  p, li{
+    margin:1em 0;
+  }
+  a{
+    color:#369;
+    text-decoration:underline;
+  }
+  a:hover{
+    color:#69c;
+  }
+  a.nav{
+    display:block;
+    text-decoration:none;
+    color:#800;
+  }
+  a.nav:hover{
+    color:#c00;
+  }
+  li{
+    list-style-position:inside;
+  }
+  pre, code{
+    font-family:"Andale Mono", "Courier New", monospace;
+    font-size:18px;
+    line-height:24px;
   }
   pre{
-  background-color:#f6f6f6;
-  padding:10px;
+    background-color:#f6f6f6;
+    padding:10px;
+    border-radius:5px;
+  }
+  em{
+    font-style:italic;
+  }
+  strong{
+    font-weight:bold;
   }
   </style>
+</head>
+<body>
+  <script src="jquery.js">
+  </script>
   <h1 id="jquery-selectors-and-events">jQuery Selectors and Events</h1>
   <h2 id="learning-objectives">Learning Objectives</h2>
   <ul>
@@ -136,37 +169,25 @@
   <p>We're going to use jQuery to manipulate elements.</p>
   <p>jQuery selectors are just like CSS selectors. The only difference is you "wrap them in cash":</p>
   <h4 id="css">CSS</h4>
-  <div class="sourceCode">
-    <pre class="sourceCode css"><code class="sourceCode css">ul &gt; li<span class="fl">.message</span><span class="dv">:not</span>(<span class="dv">:first-child</span>)<span class="kw">{</span>
-  <span class="kw">color:</span> <span class="dt">red</span><span class="kw">;</span>
-<span class="kw">}</span></code></pre>
-  </div>
+  <pre class="css"><code>ul &gt; li.message:not(:first-child){
+  color: red;
+}</code></pre>
   <h4 id="jquery">jQuery</h4>
-  <div class="sourceCode">
-    <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"ul &gt; li.message:not(:first-child)"</span>).<span class="at">css</span>(<span class="st">"color"</span><span class="op">,</span> <span class="st">"red"</span>)</code></pre>
-  </div>
+  <pre class="js"><code>$("ul &gt; li.message:not(:first-child)").css("color", "red")</code></pre>
   <h3 id="you-do-getters-and-setters">You Do: Getters and setters</h3>
   <p>Several functions, like <code>.css()</code>, <code>.html()</code>, and <code>.text()</code> do different things depending on whether you put 1, 2, 3, or more things inside them. What's the difference?</p>
-  <div class="sourceCode">
-    <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>()
-<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>(<span class="st">"color"</span>)
-<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">css</span>(<span class="st">"color"</span><span class="op">,</span> <span class="st">"red"</span>)</code></pre>
-  </div>
-  <div class="sourceCode">
-    <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>()
-<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span>)
-<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">html</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span><span class="op">,</span> <span class="st">"&lt;h1&gt;World&lt;/h1&gt;"</span>)</code></pre>
-  </div>
-  <div class="sourceCode">
-    <pre class="sourceCode js"><code class="sourceCode javascript"><span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>()
-<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span>)
-<span class="at">$</span>(<span class="st">"something"</span>).<span class="at">text</span>(<span class="st">"&lt;h1&gt;Hello&lt;/h1&gt;"</span><span class="op">,</span> <span class="st">"&lt;h1&gt;World&lt;/h1&gt;"</span>)</code></pre>
-  </div>
+  <pre class="js"><code>$("something").css()
+$("something").css("color")
+$("something").css("color", "red")</code></pre>
+  <pre class="js"><code>$("something").html()
+$("something").html("&lt;h1&gt;Hello&lt;/h1&gt;")
+$("something").html("&lt;h1&gt;Hello&lt;/h1&gt;", "&lt;h1&gt;World&lt;/h1&gt;")</code></pre>
+  <pre class="js"><code>$("something").text()
+$("something").text("&lt;h1&gt;Hello&lt;/h1&gt;")
+$("something").text("&lt;h1&gt;Hello&lt;/h1&gt;", "&lt;h1&gt;World&lt;/h1&gt;")</code></pre>
   <h2 id="whats-an-event">What's an event?</h2>
   <h2 id="putting-them-together">Putting them together</h2>
-  <div class="sourceCode">
-    <pre class="sourceCode js"></pre>
-  </div>
+  <pre class="js"></pre>
   <h3 id="lights-out">Lights Out</h3>
   <h3 id="tic-tac-toe">Tic Tac Toe</h3>
   <h2 id="references">References</h2>
